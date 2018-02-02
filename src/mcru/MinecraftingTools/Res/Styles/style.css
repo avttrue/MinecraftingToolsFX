@@ -1,0 +1,173 @@
+/* https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html */
+/* https://pastebin.com/0PebD9nR */
+*{
+    -fx-base: MT_COLOR;
+    -fx-selection-bar-non-focused: -fx-selection-bar;
+}
+
+.tab{
+    -fx-background-color:
+           linear-gradient(MT_COLOR_LIGHT, MT_COLOR_DARK),
+           linear-gradient(MT_COLOR 0%, MT_COLOR_LIGHT 40%, MT_COLOR_DARK 100%),
+           linear-gradient(MT_COLOR 0%, MT_COLOR_DARK 50%);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+.tab:selected{
+    -fx-background-color:
+           linear-gradient(MT_COLOR_DARK, MT_COLOR_LIGHT),
+           linear-gradient(MT_COLOR_DARK 0%, MT_COLOR_LIGHT 40%, MT_COLOR 100%),
+           linear-gradient(MT_COLOR_DARK 0%, MT_COLOR 50%);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+
+.tab .tab-close-button{
+    -fx-background-color:red;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+
+.tab-pane .tab-header-area .tab-header-background{
+   -fx-background-color:
+           linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+           linear-gradient(to bottom, MT_COLOR_LIGHT 2%, MT_COLOR_DARK 98%);
+   -fx-background-insets: 0, 0 0 1 0;
+   -fx-padding: 2 2 2 2;
+   -fx-effect: dropshadow(two-pass-box,MT_COLOR_DARK,5,.2,0,0);
+}
+
+.button{
+    -fx-background-color:
+            linear-gradient(MT_COLOR_LIGHT, MT_COLOR_DARK),
+            linear-gradient(MT_COLOR 0%, MT_COLOR_LIGHT 40%, MT_COLOR_DARK 100%),
+            linear-gradient(MT_COLOR 0%, MT_COLOR_DARK 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+
+.button:pressed{
+    -fx-background-color:
+            linear-gradient(MT_COLOR_DARK, MT_COLOR_LIGHT),
+            linear-gradient(MT_COLOR_DARK 0%, MT_COLOR_LIGHT 40%, MT_COLOR 100%),
+            linear-gradient(MT_COLOR_DARK 0%, MT_COLOR 50%);
+}
+
+.tool-bar{
+    -fx-background-color:
+        linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+        linear-gradient(to bottom, MT_COLOR_LIGHT 1%, MT_COLOR_DARK 100%);
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 2 2 2 2;
+    -fx-effect: dropshadow(two-pass-box,MT_COLOR_DARK,5,.2,0,0);
+}
+
+.menu-bar{
+     -fx-background-color:
+         linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+         linear-gradient(to bottom, MT_COLOR_LIGHT 1%, MT_COLOR_DARK 100%);
+     -fx-background-insets: 0, 0 0 1 0;
+     -fx-padding: 1 1 1 1;
+     -fx-margin: 0 0 0 0;
+     -fx-effect: dropshadow(two-pass-box,MT_COLOR_DARK,5,.2,0,0);
+}
+
+.separator .line {
+    -fx-border-style: solid;
+    -fx-border-width: 2;
+    -fx-padding: 0 0 0 0;
+    -fx-margin: 0 0 0 0;
+}
+
+.context-menu{
+     -fx-background-color:
+         linear-gradient(to bottom, derive(-fx-base,-30%), derive(-fx-base,-60%)),
+         linear-gradient(to bottom, MT_COLOR_LIGHT 1%, MT_COLOR_DARK 100%);
+     -fx-background-insets: 0, 0 0 1 0;
+     -fx-padding: 1 1 1 1;
+     -fx-margin: 0 0 0 0;
+     -fx-effect: dropshadow(two-pass-box,MT_COLOR_DARK,5,.2,0,0);
+}
+
+menu-item{
+        -fx-padding: 0 0 0 0;
+        -fx-margin: 0 0 0 0;
+}
+
+.list-cell:filled:selected{
+    -fx-font-weight: bold;
+}
+
+.text-area{
+    -fx-font-family: monospace;
+    -fx-font-weight: bold;
+}
+
+.hyperlink{
+    -fx-font-family: monospace;
+    -fx-font-weight: bold;
+}
+
+.titled-pane{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+}
+
+.titled-pane .title{
+    -fx-background-color:
+            linear-gradient(MT_COLOR_LIGHT, MT_COLOR_DARK),
+            linear-gradient(MT_COLOR 0%, MT_COLOR_LIGHT 40%, MT_COLOR_DARK 100%),
+            linear-gradient(MT_COLOR 0%, MT_COLOR_DARK 50%);
+    -fx-background-insets: 0, 1, 2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+    -fx-font-family: monospace;
+    -fx-font-weight: bold;
+}
+
+.progress-bar {
+    -fx-indeterminate-bar-length: 100;
+}
+
+.progress-bar > .bar{
+    -fx-background-color: linear-gradient(to right, transparent, #800000);
+    -fx-background-radius: 5;
+    -fx-background-insets: 3 2 3 2;
+    -fx-padding: 0.35em;
+}
+
+.progress-bar > .track{
+  -fx-control-inner-background: derive(MT_COLOR_LIGHT, 80%);
+}
+
+.menu-item .label{
+    -fx-padding: 0em;
+    -fx-border-insets: 0 0 0 0;
+}
+
+.GROUP-BOX{
+    -fx-border-base: MT_COLOR_DARK;
+    -fx-border-shadow: MT_COLOR_LIGHT;
+    -fx-light-border: derive(-fx-border-base, 25%);
+    -fx-border-color: -fx-light-border -fx-border-base -fx-border-base -fx-light-border;
+    -fx-border-insets: 0 1 1 0;
+    -fx-background-color: -fx-border-shadow, -fx-background;
+    -fx-background-insets: 1 0 0 1, 2;
+    -fx-padding: 5;
+}
+.GROUP-BOX-CAPTION{
+    -fx-background-color:
+                linear-gradient(MT_COLOR_LIGHT, MT_COLOR_DARK),
+                linear-gradient(MT_COLOR 0%, MT_COLOR_LIGHT 40%, MT_COLOR_DARK 100%),
+                linear-gradient(MT_COLOR 0%, MT_COLOR_DARK 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+    -fx-font-family: monospace;
+    -fx-font-weight: bold;
+}
+
+.PANEL-SPECIAL{
+    -fx-background-color:
+                linear-gradient(MT_COLOR_DARK, MT_COLOR_LIGHT);
+    -fx-background-radius: 4;
+    -fx-background-insets: 0,1,2;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0.0, 0, 1);
+    -fx-font-family: monospace;
+}
